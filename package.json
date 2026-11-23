@@ -1,20 +1,27 @@
 {
-  "name": "web_mini_game",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "name": "rolling-qna-v2",
+  "version": "2.0.0",
+  "description": "모임별 E2EE 프라이버시 보호 & 질문 은행 기반 Rolling Q&A",
+  "main": "server/index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js"
+    "start": "node server/index.js",
+    "dev:server": "node --watch server/index.js",
+    "dev:client": "npm --prefix client run dev",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "npm --prefix client run build",
+    "test:api": "node server/tests/api.test.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["rolling-qna", "e2ee", "sqlite", "react"],
+  "author": "lTvTl",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "csv-parser": "^3.2.1",
-    "csv-writer": "^1.6.0",
     "express": "^5.2.1",
-    "express-session": "^1.19.0"
+    "express-rate-limit": "^7.5.0",
+    "express-session": "^1.19.0",
+    "helmet": "^8.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
   }
 }

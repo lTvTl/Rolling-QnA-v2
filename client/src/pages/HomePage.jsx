@@ -101,9 +101,6 @@ export default function HomePage() {
     return (
         <div className="home-wrapper">
             <div className="hero-brand">
-                <div className="hero-badge">
-                    <ShieldCheck size={15} /> 종단간 암호화 (E2EE) · 모임 전용 프라이빗 Q&A
-                </div>
                 <h1 className="hero-title clickable-logo" onClick={() => navigate('/')}>
                     Rolling <span className="accent-gradient">Q&A</span>
                 </h1>

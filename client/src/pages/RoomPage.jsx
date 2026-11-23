@@ -380,9 +380,6 @@ export default function RoomPage() {
                     <button type="button" className="logo-btn auth-logo" onClick={() => navigate('/')}>
                         Rolling <span className="accent-text">Q&A</span>
                     </button>
-                    <div className="hero-badge" style={{ marginBottom: 14 }}>
-                        <ShieldCheck size={14} /> E2EE 복호화 완료
-                    </div>
                     <h1 className="join-room-title">{meta.title}</h1>
                     {meta.description && <p className="card-desc">{meta.description}</p>}
                     <p className="member-count-hint">
@@ -488,9 +485,6 @@ export default function RoomPage() {
                     >
                         Rolling <span className="accent-text">Q&A</span>
                     </button>
-                    <span className="e2ee-pill" title="종단간 암호화 적용 중">
-                        <ShieldCheck size={13} /> E2EE
-                    </span>
                 </div>
 
                 <div className="header-right">
